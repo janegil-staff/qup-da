@@ -266,7 +266,7 @@ export default function QupDA() {
               onMouseLeave={e => { e.currentTarget.style.background = "#fff"; e.currentTarget.style.transform = "translateY(0)"; }}
             >
               <span>✉</span>
-              post@qupda.com
+              jan.egil.staff@qupda.com
             </a>
             <span style={{ color: "rgba(255,255,255,0.4)", fontSize: 13 }}>
               Qup DA · Org. 912 372 022 · Norway
