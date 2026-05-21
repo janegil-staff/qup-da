@@ -1,7 +1,7 @@
-// app/terms/page.jsx
+// src/app/terms/page.js
 //
 // Terms of Service for Staff Arts (Qup DA). Served at /terms.
-// Plain React + scoped <style jsx> so it needs no Tailwind/CSS-module setup.
+// Server Component — uses inline styles (no styled-jsx).
 
 import Link from 'next/link';
 
@@ -10,11 +10,29 @@ export const metadata = {
   description: 'The terms governing use of the Staff Arts app, operated by Qup DA.',
 };
 
+const C = {
+  wrap: {
+    maxWidth: 760,
+    margin: '0 auto',
+    padding: '48px 24px 96px',
+    background: '#faf7f2',
+    color: '#1a1a1a',
+    fontFamily: "Georgia, 'Times New Roman', serif",
+    lineHeight: 1.65,
+    fontSize: 17,
+  },
+  h1: { fontSize: 30, color: '#2d4a6e', marginBottom: 4 },
+  h2: { fontSize: 21, color: '#2d4a6e', marginTop: 38 },
+  meta: { color: '#666', fontSize: 15, marginBottom: 32 },
+  link: { color: '#c97060' },
+  footer: { marginTop: 48, paddingTop: 20, borderTop: '1px solid #ddd', color: '#666', fontSize: 14 },
+};
+
 export default function TermsPage() {
   return (
-    <main className="wrap">
-      <h1>Terms of Service</h1>
-      <p className="meta">Staff Arts &middot; Last updated: [INSERT DATE]</p>
+    <main style={C.wrap}>
+      <h1 style={C.h1}>Terms of Service</h1>
+      <p style={C.meta}>Staff Arts &middot; Last updated: [INSERT DATE]</p>
 
       <p>
         These Terms of Service ("Terms") govern your use of the{' '}
@@ -24,7 +42,7 @@ export default function TermsPage() {
         you agree to these Terms. If you do not agree, please do not use the App.
       </p>
 
-      <h2>1. The service</h2>
+      <h2 style={C.h2}>1. The service</h2>
       <p>
         Staff Arts is a marketplace where artists can list artworks and events
         and where users can browse listings and send each other private messages.
@@ -34,7 +52,7 @@ export default function TermsPage() {
         between the users involved, at their own risk.
       </p>
 
-      <h2>2. Accounts</h2>
+      <h2 style={C.h2}>2. Accounts</h2>
       <ul>
         <li>You must be at least 16 years old to use the App.</li>
         <li>You are responsible for keeping your login PIN confidential and for all activity under your account.</li>
@@ -42,7 +60,7 @@ export default function TermsPage() {
         <li>You may delete your account at any time from within the App under Settings.</li>
       </ul>
 
-      <h2>3. Content you post</h2>
+      <h2 style={C.h2}>3. Content you post</h2>
       <p>
         You retain ownership of the artworks, images, listings, and messages you
         post ("Your Content"). By posting Your Content, you grant Qup DA a
@@ -58,7 +76,7 @@ export default function TermsPage() {
         <li>Your Content is accurate and not misleading, including any description of how a work was created.</li>
       </ul>
 
-      <h2>4. Acceptable use</h2>
+      <h2 style={C.h2}>4. Acceptable use</h2>
       <p>
         When using the App, including the messaging feature, you agree{' '}
         <strong>not</strong> to:
@@ -72,7 +90,7 @@ export default function TermsPage() {
         <li>use the App for any illegal purpose or in violation of any applicable law.</li>
       </ul>
 
-      <h2>5. Reporting and moderation</h2>
+      <h2 style={C.h2}>5. Reporting and moderation</h2>
       <p>
         We do not tolerate objectionable content or abusive behaviour. Users can
         report content or other users, and may block users they do not wish to
@@ -82,7 +100,7 @@ export default function TermsPage() {
         reports of objectionable content promptly.
       </p>
 
-      <h2>6. Transactions between users</h2>
+      <h2 style={C.h2}>6. Transactions between users</h2>
       <p>
         Because Staff Arts does not handle payments, any agreement to buy or sell
         an artwork is solely between the buyer and the seller. We do not verify
@@ -92,7 +110,7 @@ export default function TermsPage() {
         caution.
       </p>
 
-      <h2>7. Intellectual property</h2>
+      <h2 style={C.h2}>7. Intellectual property</h2>
       <p>
         The App itself, including its design, software, branding, and "Staff
         Arts" name, is owned by Qup DA and protected by applicable laws. These
@@ -100,7 +118,7 @@ export default function TermsPage() {
         using the App as intended.
       </p>
 
-      <h2>8. Termination</h2>
+      <h2 style={C.h2}>8. Termination</h2>
       <p>
         You may stop using the App and delete your account at any time. We may
         suspend or terminate your access if you breach these Terms or if we
@@ -109,7 +127,7 @@ export default function TermsPage() {
         other users.
       </p>
 
-      <h2>9. Disclaimers</h2>
+      <h2 style={C.h2}>9. Disclaimers</h2>
       <p>
         The App is provided "as is" and "as available". To the fullest extent
         permitted by law, we disclaim all warranties, express or implied,
@@ -117,7 +135,7 @@ export default function TermsPage() {
         warrant that the App will be uninterrupted, error-free, or secure.
       </p>
 
-      <h2>10. Limitation of liability</h2>
+      <h2 style={C.h2}>10. Limitation of liability</h2>
       <p>
         To the fullest extent permitted by applicable law, Qup DA shall not be
         liable for any indirect, incidental, or consequential damages, or for any
@@ -127,21 +145,21 @@ export default function TermsPage() {
         including your statutory rights as a consumer.
       </p>
 
-      <h2>11. Privacy</h2>
+      <h2 style={C.h2}>11. Privacy</h2>
       <p>
         Our handling of personal data is described in our{' '}
-        <Link href="/privacy">Privacy Policy</Link>, which forms part of these
-        Terms.
+        <Link style={C.link} href="/privacy">Privacy Policy</Link>, which forms
+        part of these Terms.
       </p>
 
-      <h2>12. Changes to these Terms</h2>
+      <h2 style={C.h2}>12. Changes to these Terms</h2>
       <p>
         We may update these Terms from time to time. We will post the updated
         version here and revise the "Last updated" date. Continued use of the App
         after changes take effect constitutes acceptance of the revised Terms.
       </p>
 
-      <h2>13. Governing law and disputes</h2>
+      <h2 style={C.h2}>13. Governing law and disputes</h2>
       <p>
         These Terms are governed by the laws of Norway. Any dispute arising from
         these Terms or your use of the App shall be subject to the jurisdiction of
@@ -149,61 +167,17 @@ export default function TermsPage() {
         consumer-protection rights you may have in your country of residence.
       </p>
 
-      <h2>14. Contact</h2>
+      <h2 style={C.h2}>14. Contact</h2>
       <p>
         Qup DA<br />
         Organisation number: 912&nbsp;372&nbsp;022<br />
         Norway<br />
-        Support: <a href="mailto:support@qupda.com">support@qupda.com</a>
+        Support: <a style={C.link} href="mailto:support@qupda.com">support@qupda.com</a>
       </p>
 
-      <footer>
+      <footer style={C.footer}>
         &copy; Qup DA. By using Staff Arts you agree to these Terms of Service.
       </footer>
-
-      <style jsx>{`
-        .wrap {
-          max-width: 760px;
-          margin: 0 auto;
-          padding: 48px 24px 96px;
-          background: #faf7f2;
-          color: #1a1a1a;
-          font-family: Georgia, 'Times New Roman', serif;
-          line-height: 1.65;
-          font-size: 17px;
-        }
-        h1 {
-          font-size: 30px;
-          color: #2d4a6e;
-          margin-bottom: 4px;
-        }
-        h2 {
-          font-size: 21px;
-          color: #2d4a6e;
-          margin-top: 38px;
-        }
-        .meta {
-          color: #666;
-          font-size: 15px;
-          margin-bottom: 32px;
-        }
-        a {
-          color: #c97060;
-        }
-        ul {
-          padding-left: 22px;
-        }
-        li {
-          margin: 6px 0;
-        }
-        footer {
-          margin-top: 48px;
-          padding-top: 20px;
-          border-top: 1px solid #ddd;
-          color: #666;
-          font-size: 14px;
-        }
-      `}</style>
     </main>
   );
 }
