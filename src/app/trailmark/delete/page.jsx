@@ -71,7 +71,7 @@ export default function TrailmarkDeleteAccountPage() {
         <h2 style={styles.h2}>Contact</h2>
         <p style={styles.p}>
           Qup DA, Bergen, Norway —{" "}
-          <a style={styles.a} href={`mailto:${DELETE_EMAIL}`}>
+          <a style={styles.a} href={`mailto:jan.egil@qupda.com`}>
             {DELETE_EMAIL}
           </a>
         </p>
