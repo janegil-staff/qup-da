@@ -93,7 +93,7 @@ export default function WartablePrivacy() {
       <h2>Contact</h2>
       <p>
         Questions about this policy? Email{" "}
-        <a href="mailto:jan.egil.staff@qupda.com">jan.egil.staff@codelab.no</a>.
+        <a href="mailto:jan.egil.staff@qupda.com">jan.egil.staff@qupda.com</a>.
       </p>
     </main>
   );
