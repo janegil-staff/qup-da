@@ -23,6 +23,7 @@ function rateLimited(ip) {
   return arr.length > max;
 }
 
+
 export async function POST(req) {
   try {
     const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
